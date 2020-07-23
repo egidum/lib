@@ -26,7 +26,7 @@ body {
     box-shadow: 0 1rem 1.5rem var(--dark-80);
     border-radius: .5rem;
 }
-.form-head {
+.form-title {
     margin: 0 0 2rem;
     padding: 0;
     color: var(--light);

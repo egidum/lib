@@ -2,7 +2,7 @@
     --main-font: sans-serif;
     --active: #0084ff;
     --light: #fff;
-    --dark80: rgba(0, 0, 0, .8);    
+    --dark-80: rgba(0, 0, 0, .8);    
     --border-line: 1px solid var(--light);
     --border-line-active:  2px solid var(--active);
 }
@@ -21,9 +21,9 @@ body {
     transform: translate(-50%, -50%);
     width: 25rem;
     padding: 2.5rem;
-    background:var(--dark80);    
+    background:var(--dark-80);    
     box-sizing: border-box;
-    box-shadow: 0 1rem 1.5rem var(--dark80);
+    box-shadow: 0 1rem 1.5rem var(--dark-80);
     border-radius: .5rem;
 }
 .form-head {

@@ -1,0 +1,86 @@
+:root {
+    --main-font: sans-serif;
+    --active: #0084ff;
+    --light: #fff;
+    --dark: #000;    
+    --border-line: 1px solid var(--light);
+    --border-line-active:  2px solid var(--active);
+}
+body { 
+    margin: 0;
+    padding: 0;
+    font-family: var(--main-font);
+    background: url(../images/ny.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;        
+}
+.form-body {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 25rem;
+    padding: 2.5rem;
+    background:var(--dark);
+    opacity: .8;
+    box-sizing: border-box;
+    box-shadow: 0 1rem 1.5rem var(--dark);
+    border-radius: .5rem;
+}
+.form-head {
+    margin: 0 0 2rem;
+    padding: 0;
+    color: var(--light);
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+.form-group {
+    position: relative;
+}
+.form-control {
+    width: 100%;
+    margin-bottom: 2rem;
+    padding: .5rem 0;
+    font-size: 1rem;
+    color: var(--light);
+    letter-spacing: 1px;  
+    background: transparent;
+    outline: none;
+    border: none;
+    border-bottom: var(--border-line);
+}
+.form-group label {
+    position: absolute; 
+    top: 0;
+    left: 0;      
+    padding: .5rem 0;
+    font-size: 1rem;
+    color: var(--light); 
+    letter-spacing: 1px;
+    pointer-events: none;
+    transition: .5s;
+}
+.form-group input:focus ~ label,
+.form-group input:valid ~ label {
+    top: -1.5rem;
+    left: 0;
+    color: var(--active);
+    font-size: 1rem;
+}
+.form-group input:focus,
+.form-group input:valid {
+    border-bottom: var(--border-line-active);
+}
+.btn {
+    width: 100%;
+    background: var(--active);    
+    font-size: 1rem;
+    color: var(--light);
+    letter-spacing: 1px;
+    padding: .7rem;
+    border: none;
+    border-radius: .3rem;   
+    outline: none;     
+    cursor: pointer;  
+}

@@ -1,0 +1,49 @@
+:root {
+    --bg-color: #f3f3f3;
+    --toggle-btn: #78909C;
+    --turn-on: #76FF03;
+    --turn-off: #FF3D00;
+    --w100: 8rem;
+}
+body {
+    margin: 0;
+    padding: 0;
+    background: var(--bg-color);
+}
+.toggle {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.toggle-checkbox {
+    position: relative;
+    width: var(--w100);
+    height: calc(var(--w100) / 2);
+    -moz-appearance: none;  
+    -webkit-appearance: none;      
+    background: var(--turn-off);
+    outline: none;
+    border-radius: calc(var(--w100) / 4);
+    box-shadow: inset 0 0 5px rgba(0, 0, 0,.2);
+    transition: .5s;
+}
+.toggle-checkbox:checked {
+    background: var(--turn-on);
+}
+.toggle-checkbox::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: calc(var(--w100) / 2);
+    height: calc(var(--w100) / 2);
+    border-radius: calc(var(--w100) / 4);
+    background: var(--toggle-btn);
+    transform: scale(.9);
+    box-shadow: 0 2px 5px rgba(0, 0, 0,.2);
+    transition: .5s;
+}
+.toggle-checkbox:checked::before {
+    left: calc(var(--w100) / 2);
+}

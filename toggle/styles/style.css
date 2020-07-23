@@ -17,7 +17,7 @@ body {
     left: 50%;
     transform: translate(-50%, -50%);
 }
-.toggle-checkbox {
+.toggle-control {
     position: relative;
     width: var(--w100);
     height: calc(var(--w100) / 2);
@@ -29,10 +29,10 @@ body {
     box-shadow: inset 0 0 5px var(--dark-20);
     transition: .5s;
 }
-.toggle-checkbox:checked {
+.toggle-control:checked {
     background: var(--turn-on);
 }
-.toggle-checkbox::before {
+.toggle-control::before {
     content: '';
     position: absolute;
     top: 0;
@@ -45,6 +45,6 @@ body {
     box-shadow: 0 2px 5px var(--dark-20);
     transition: .5s;
 }
-.toggle-checkbox:checked::before {
+.toggle-control:checked::before {
     left: calc(var(--w100) / 2);
 }

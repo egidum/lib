@@ -1,9 +1,9 @@
 :root {
     --bg-color: #f3f3f3;
-    --toggle-btn-on: #f3f3f3;
-    --toggle-btn-off: #78909c;
-    --turn-on: #76ff03;
-    --turn-off: #ff3d00;
+    --btn-on: #f3f3f3;
+    --btn-off: #78909c;
+    --bg-turn-on: #76ff03;
+    --bg-turn-off: #ff3d00;
     --dark-20: rgba(0, 0, 0,.2);
     --w100: 8rem;
 }
@@ -12,28 +12,28 @@ body {
     padding: 0;
     background: var(--bg-color);
 }
-.toggle {
+.switch {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
 }
-.toggle-control {
+.switch-control {
     position: relative;
     width: var(--w100);
     height: calc(var(--w100) / 2);
     -moz-appearance: none;  
     -webkit-appearance: none;      
-    background: var(--turn-off);
+    background: var(--bg-turn-off);
     outline: none;
     border-radius: calc(var(--w100) / 4);
     box-shadow: inset 0 0 5px var(--dark-20);
     transition: .5s;
 }
-.toggle-control:checked {
-    background: var(--turn-on);
+.switch-control:checked {
+    background: var(--bg-turn-on);
 }
-.toggle-control::before {
+.switch-control::before {
     content: '';
     position: absolute;
     top: 0;
@@ -41,12 +41,12 @@ body {
     width: calc(var(--w100) / 2);
     height: calc(var(--w100) / 2);
     border-radius: calc(var(--w100) / 4);
-    background: var(--toggle-btn-off);
+    background: var(--btn-off);
     transform: scale(.8);
     /* box-shadow: 0 2px 5px var(--dark-20); */
     transition: .5s;
 }
-.toggle-control:checked::before {
+.switch-control:checked::before {
     left: calc(var(--w100) / 2);
-    background: var(--toggle-btn-on);    
+    background: var(--btn-on);    
 }

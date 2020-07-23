@@ -3,6 +3,7 @@
     --toggle-btn: #78909C;
     --turn-on: #76FF03;
     --turn-off: #FF3D00;
+    --dark20: rgba(0, 0, 0,.2);
     --w100: 8rem;
 }
 body {
@@ -25,7 +26,7 @@ body {
     background: var(--turn-off);
     outline: none;
     border-radius: calc(var(--w100) / 4);
-    box-shadow: inset 0 0 5px rgba(0, 0, 0,.2);
+    box-shadow: inset 0 0 5px var(--dark20);
     transition: .5s;
 }
 .toggle-checkbox:checked {
@@ -41,7 +42,7 @@ body {
     border-radius: calc(var(--w100) / 4);
     background: var(--toggle-btn);
     transform: scale(.9);
-    box-shadow: 0 2px 5px rgba(0, 0, 0,.2);
+    box-shadow: 0 2px 5px var(--dark20);
     transition: .5s;
 }
 .toggle-checkbox:checked::before {

@@ -1,7 +1,7 @@
 :root {
   --bg-color: #f3f3f3;
-  --btn-on: #f3f3f3;
-  --btn-off: #78909c;
+  --btn-turn-on: #f3f3f3;
+  --btn-turn-off: #78909c;
   --bg-turn-on: #76ff03;
   --bg-turn-off: #ff3d00;
   --dark-20: rgba(0, 0, 0, 0.2);
@@ -47,7 +47,7 @@ body {
   width: calc(var(--w-100) / 2);
   height: calc(var(--w-100) / 2);
   border-radius: calc(var(--w-100) / 4);
-  background: var(--btn-off);
+  background: var(--btn-turn-off);
   transform: scale(0.8);
   box-shadow: 0 2px 5px var(--dark-20);
   transition: 0.5s;
@@ -55,5 +55,5 @@ body {
 
 .switch-control:checked::before {
   left: calc(var(--w-100) / 2);
-  background: var(--btn-on);
+  background: var(--btn-turn-on);
 }
